@@ -1,5 +1,5 @@
-module Html.Attributes exposing
-  ( style, property, attribute, map
+module SafeHtml.Attributes exposing
+  ( style, map
   , class, classList, id, title, hidden
   , type_, value, defaultValue, checked, placeholder, selected
   , accept, acceptCharset, action, autocomplete, autofocus
@@ -84,9 +84,10 @@ Attributes that can be attached to any HTML tag but are less commonly used.
 
 -}
 
-import Html exposing (Attribute)
+import SafeHtml exposing (Attribute)
 import Json.Encode as Json
 import VirtualDom
+import String exposing (toLower, left)
 
 
 -- This library does not include low, high, or optimum because the idea of a
@@ -850,8 +851,10 @@ cite value =
 
 {-| The URL of a linked resource, such as `a`, `area`, `base`, or `link`. -}
 href : String -> Attribute msg
-href value =
-  stringProperty "href" value
+href value = 
+  case (toLower (left 11 value)) of
+    "javascript:" -> stringProperty "href" ""
+    _ -> stringProperty "href" value
 
 
 {-| Specify where the results of clicking an `a`, `area`, `base`, or `form`

@@ -1,4 +1,4 @@
-module Html.Lazy exposing
+module SafeHtml.Lazy exposing
   ( lazy, lazy2, lazy3
   )
 

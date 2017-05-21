@@ -1,6 +1,6 @@
-module Html exposing
+module SafeHtml exposing
   ( Html, Attribute
-  , text, node, map
+  , text, map
   , beginnerProgram, program, programWithFlags
   , h1, h2, h3, h4, h5, h6
   , div, p, hr, pre, blockquote

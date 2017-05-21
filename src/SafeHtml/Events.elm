@@ -1,11 +1,11 @@
-module Html.Events exposing
+module SafeHtml.Events exposing
   ( onClick, onDoubleClick
   , onMouseDown, onMouseUp
   , onMouseEnter, onMouseLeave
   , onMouseOver, onMouseOut
   , onInput, onCheck, onSubmit
   , onBlur, onFocus
-  , on, onWithOptions, Options, defaultOptions
+  , onWithOptions, Options, defaultOptions
   , targetValue, targetChecked, keyCode
   )
 

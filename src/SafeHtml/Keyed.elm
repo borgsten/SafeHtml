@@ -1,4 +1,4 @@
-module Html.Keyed exposing
+module SafeHtml.Keyed exposing
   ( node
   , ol
   , ul
