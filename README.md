@@ -1,5 +1,10 @@
-# HTML for Elm
+# SafeHTML for Elm
 
-The core HTML library for Elm. It is backed by [elm-lang/virtual-dom](http://package.elm-lang.org/packages/elm-lang/virtual-dom/latest/) which handles the dirty details of rendering things quickly.
+This package is a safe subset of [elm-lang/html](https://github.com/elm-lang/html) that aims prevents arbitrary javascript execution.
 
-The best way to learn how to use this library is to read [guide.elm-lang.org](http://guide.elm-lang.org/), particularly the section on [The Elm Architecture](http://guide.elm-lang.org/architecture/index.html).
+The following changes has been made:
+* The attribute function has been unexposed.
+* The property function has been unexposed.
+* The node function has been unexposed.
+* The on node function has been unexposed.
+* Sanitazion has been introduced into the href attribute to filter for "javascript:"

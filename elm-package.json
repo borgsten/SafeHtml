@@ -1,6 +1,6 @@
 {
     "version": "2.0.0",
-    "summary": "Fast HTML, rendered with virtual DOM diffing",
+    "summary": "elm-lang/html package with improved security to prevent arbitrary javascript execution.",
     "repository": "https://github.com/borgsten/safehtml.git",
     "license": "BSD3",
     "source-directories": [
